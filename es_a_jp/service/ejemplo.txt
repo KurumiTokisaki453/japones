@@ -1,0 +1,34 @@
+from tu_app.models import EstudianteSemestre
+
+def obtener_cantidad_aprobados(semestre):
+    cantidad_aprobados = EstudianteSemestre.objects.filter(semestre=semestre, aprobado=True).count()
+    return cantidad_aprobados
+#||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+mi_proyecto/
+|-- mi_app/
+|   |-- migrations/
+|   |-- static/
+|   |-- templates/
+|   |-- __init__.py
+|   |-- admin.py
+|   |-- apps.py
+|   |-- models.py
+|   |-- services/
+|   |   |-- __init__.py
+|   |   |-- estudiante_semestre_service.py
+|   |-- tests.py
+|   |-- views.py
+|-- mi_proyecto/
+|   |-- __init__.py
+|   |-- asgi.py
+|   |-- settings.py
+|   |-- urls.py
+|   |-- wsgi.py
+|-- manage.py
+#---------------------------------------------------------------------------------------------------
+#Luego, podrías importar y utilizar esta función desde otras partes de tu aplicación:
+from .services.estudiante_semestre_service import obtener_cantidad_aprobados
+
+# ...
+
+cantidad_aprobados = obtener_cantidad_aprobados(mi_semestre)
