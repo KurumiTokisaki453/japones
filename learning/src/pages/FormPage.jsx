@@ -48,24 +48,26 @@ export function FormPage() {
 
       {/* {hiraganaList.map((item) => ( */}
       <div className='col-start-1' >s</div>
-      <div className='grid grid-cols-5 col-span-5'>
+      <div className='grid grid-cols-5 col-span-5 bg-blue-500'>
 
         <div
           // key={item.id} 
-          className="border rounded-md">
-
-          <h3 className="text-xl font-bold mb-2">
+          className=" flex-col divide-y border border-blue-300">
+            <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold bg-red-500">
             {/* {item.letra} */}
-            あa</h3>
-          <p className="text-blue-600">
-            {/* {item.pronunciacion} */}
-            a</p>
-          <p className="text-sm mt-2">
-            {/* {item.traduccion} */}
-            a</p>
-          <p className='text-blue-500' >
-            {/* {item.trazos} */}
-            a</p>
+            あ
+            </div>
+            <div className='justify-evenly flex bg-blue-400 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:!text-4xl'>
+              <p className="bg-blue-500 text-emerald-300">
+                {/* {item.pronunciacion} */}
+              A</p>
+              <p className="text-cyan-200">
+                {/* {item.traduccion} */}
+              a</p>
+              <p className='bg-blue-500 text-purple-200'>
+                {/* {item.trazos} */}
+              a</p>
+            </div>
         </div>
         {/* ------------------------------ */}
         <div className="rounded-md">
