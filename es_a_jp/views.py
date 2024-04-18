@@ -9,3 +9,7 @@ from .models import *
 class TraduccionView(viewsets.ModelViewSet):
     serializer_class = TraduccionSerializer
     queryset = Traduccion.objects.all()
+
+class KatakanaView(viewsets.ModelViewSet):
+    serializer_class = KatakanaSerializer
+    queryset = Katakana.objects.all()

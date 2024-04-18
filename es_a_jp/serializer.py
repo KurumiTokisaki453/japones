@@ -7,3 +7,7 @@ class TraduccionSerializer(serializers.ModelSerializer):
         model = Traduccion
         fields = '__all__'
 
+class KatakanaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Katakana
+        fields = '__all__'

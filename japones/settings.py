@@ -25,7 +25,11 @@ SECRET_KEY = 'django-insecure-$&=v%@ull)-77nle1z3*b&_-9c_a6%x7g=_+2@+wd5ra!a=8)#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "192.168.1.10",
+    # 'http://192.168.1.10:8000',   
+]
 
 
 # Application definition
@@ -137,6 +141,7 @@ CORS_ALLOWED_ORIGINS = [
     # "https://sub.example.com",
     # "https://localhost:8000", # Link por defecto de django.
     # "https://127.0.0.1:9000",
+    "http://192.168.1.10:5173",
     ]
 
 REST_FRAMEWORK = {
